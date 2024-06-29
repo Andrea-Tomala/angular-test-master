@@ -13,10 +13,10 @@
               <p class="row-content">{{game.name}}</p>
             </div>
             <div class="row-action">
-              <button class="btn-delete">Eliminar</button>
+              <button class="btn-delete" (click)="deleteGame(game.id)">Eliminar</button>
             </div>
             <div class="row-action">
-              <a href="/angular/senior/games/{{game.id}}" class="btn-edit">Editar</a>
+              <a [routerLink]="['/angular/senior/games', game.id]" class="btn-edit">Editar</a>
             </div>
           </div>
         </li>

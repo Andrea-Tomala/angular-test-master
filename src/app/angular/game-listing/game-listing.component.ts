@@ -14,6 +14,13 @@ export class GameListingComponent implements OnInit {
   ngOnInit(): void {
     this.gameService.getGames().subscribe((games) => {
       this.games = games;
+      console.log(this.games)
     });
+  }
+
+  deleteGame(gameId: number): void {
+    this.gameService.deleteGame(gameId).subscribe(()=>{
+      this.games = this.games?.filter(game => game.id !== gameId);
+    })
   }
 }

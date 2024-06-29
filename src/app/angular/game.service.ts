@@ -15,19 +15,22 @@ export class GameService {
     return this.http.get<Game[]>(this.gamesUrl);
   }
 
-  getGameById(gameId: string) {
-    throw new Error('Not implemented yet');
+  getGameById(gameId: string):Observable<Game> {
+    const url = `${this.gamesUrl}/${gameId}`;
+    return this.http.get<Game>(url);
   }
 
-  createGame(game: Game) {
-    throw new Error('Not implemented yet');
+  createGame(game: Game): Observable<Game> {
+    return this.http.post<Game>(this.gamesUrl, game);
   }
 
-  updateGame(game: Game) {
-    throw new Error('Not implemented yet');
+  updateGame(game: Game): Observable<Game> {
+    const url = `${this.gamesUrl}/${game.id}`;
+    return this.http.put<Game>(url, game);
   }
 
-  deleteGame(gameId: string) {
-    throw new Error('Not implemented yet');
+  deleteGame(gameId: number) : Observable<Game>{
+    const url = `${this.gamesUrl}/${gameId}`;
+    return this.http.delete<Game>(url);
   }
 }

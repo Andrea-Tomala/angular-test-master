@@ -1,6 +1,49 @@
 <div class="wrapper">
   <h1>Crear una cuenta</h1>
+
   <form>
-    <p>Crea tu formulario Aqui</p>
+    <label for="nombre">Nombre(*)</label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+
+    <label for="apellido">Apellido(*)</label>
+    <input type="text" id="apellido" name="apellido"><br><br>
+
+    <label for="correo">Correo electrónico(*)</label>
+    <input type="email" id="correo" name="correo"><br><br>
+
+    <label for="fecha_nacimiento">Fecha de nacimiento</label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br><br>
+
+    <label for="cargo">Cargo:</label>
+    <select id="cargo" name="cargo">
+      <option value="">Seleccione un cargo</option>
+      <option value="front">Desarrollador Front-End</option>
+      <option value="desarrollador">Desarrollador</option>
+      <option value="diseñador">Diseñador</option>
+      <option value="analista">Analista</option>
+      <option value="gerente">Gerente</option>
+    </select><br><br>
+
+    <label>Lenguaje de programación favorito</label>
+    <div class="field-lenguages">
+      <input type="radio" id="lenguaje_javascript" name="lenguaje" value="lenguaje_javascript">
+      <label class="label-radio-buttons" for="lenguaje_javascript">JavaScript</label>
+    </div>
+
+    <div class="field-lenguages">
+      <input type="radio" id="lenguaje_kotlin" name="lenguaje" value="kotlin">
+      <label class="label-radio-buttons" for="lenguaje_kotlin">Kotlin</label>
+    </div>
+
+    <div class="field-lenguages">
+      <input type="radio" id="lenguaje_rust" name="lenguaje" value="rust">
+      <label class="label-radio-buttons" for="lenguaje_rust">Rust</label>
+    </div>
+    <div class="field-lenguages">
+      <input type="radio" id="lenguaje_golang" name="lenguaje" value="golang">
+      <label class="label-radio-buttons" for="lenguaje_golang">Golang</label><br>
+    </div>
+
+    <button type="submit"  value="Enviar">Enviar</button>
   </form>
 </div>

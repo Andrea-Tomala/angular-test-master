@@ -2,18 +2,18 @@
   <div class="card">
     <h2 class="title">Editar Juego</h2>
     <!--BEGIN: TUS CAMBIOS AQUI-->
-    <form>
+    <form [formGroup]="gameForm" (ngSubmit)="updateGames()">
       <div class="field">
         <label for="id">Id</label>
-        <input id="id" type="text" disabled />
+        <input id="id" type="text" formControlName="id" [disabled]="isEditMode" />
       </div>
       <div class="field">
         <label for="name">Nombre</label>
-        <input id="name" type="text" />
+        <input id="name" type="text" formControlName="name"/>
       </div>
       <div class="field">
-        <label for="name">Descripción</label>
-        <textarea id="name" type="text"></textarea>
+        <label for="description">Descripción</label>
+        <textarea id="ndescriptioname" type="text" formControlName="description"></textarea>
       </div>
       <div class="actions">
         <button type="submit" class="btn-primary">Actualizar</button>
