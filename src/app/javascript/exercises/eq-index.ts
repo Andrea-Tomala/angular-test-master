@@ -28,18 +28,6 @@ console.log(getEqIndexes(input));
 console.log(getEqIndexes(input2));
 
 
-
-class Base {
-  protected m = 10;
-}
-class Derived extends Base {
-  override m = 15;
-}
-const d = new Derived();
-console.log(d.m);
-
-
-
 //Explicación
 /*
 1. se itera sobre cada elemento del arreglo arr con bucle for. para cada elemento
